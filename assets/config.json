@@ -23,13 +23,13 @@
   },
   "infoFields": {
     "info1": {
-      "label": "Info 1"
+      "label": "Abstract"
     },
     "info2": {
-      "label": "Info 2"
+      "label": "Author List"
     },
     "info3": {
-      "label": "Info 3"
+      "label": "Notes"
     }
   },
   "branding": {
