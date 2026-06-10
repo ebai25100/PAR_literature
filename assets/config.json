@@ -3,38 +3,23 @@
     "pageTitle": "Interactive Literature Database",
     "pageSubtitle": "Journal of the Learning Sciences",
     "heroHeading": "Database Title",
-    "submitButtonText": "Submit an Article",
-    "submitButtonLink": "https://forms.gle/42GckNJQ4EVMdHDr7"
+    "submitButtonText": "Please dont submit articles",
+    "submitButtonLink": ""
   },
   "filters": {
     "filter1": {
-      "label": "Theory"
-    },
-    "filter2": {
-      "label": "Method"
-    },
-    "filter3": {
-      "label": "Pedagogy / Instruction"
-    },
-    "filter4": {
-      "label": "Population"
-    },
-    "filter5": {
       "label": "Setting"
     },
-    "filter6": {
-      "label": "Subject / Content Area"
+    "filter2": {
+      "label": "Population"
     },
-    "filter7": {
-      "label": "Technologies"
+    "filter3": {
+      "label": "Theory"
     },
-    "filter8": {
-      "label": "Construct"
-    },
-    "decadePublished": {
-      "label": "Decade Published"
+    "filter4": {
+      "label": "Subject"
     }
-
+    
   },
   "infoFields": {
     "info1": {
