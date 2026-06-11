@@ -66,7 +66,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const { records, filters } = await loadDatabase();
 
+  // Merge keys from config and CSV-derived filters.
   FILTER_KEYS = mergeFilterKeys(Object.keys(appConfig?.filters || {}), filters);
+
+  // If the user explicitly provided a `filters` object in `assets/config.json`,
+  // treat that as an allowlist and only render those keys (plus the decade key).
+  if (appConfig && appConfig.__userFiltersProvided) {
+    const allowed = new Set(Object.keys(appConfig.filters || {}).map((k) => String(k).trim()));
+    FILTER_KEYS = FILTER_KEYS.filter((key) => allowed.has(key) || key === DECADE_FILTER_KEY);
+  }
+
   if (!FILTER_KEYS.includes(DECADE_FILTER_KEY)) {
     FILTER_KEYS.push(DECADE_FILTER_KEY);
   }
@@ -1181,7 +1190,10 @@ async function loadConfig() {
     const response = await fetch("assets/config.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Config not found");
     const userConfig = await response.json();
+    const userProvidedFilters = Boolean(userConfig && userConfig.filters && Object.keys(userConfig.filters).length > 0);
     mergedConfig = mergeDeep(defaultConfig, userConfig);
+    // Mark whether the user explicitly provided a `filters` object in config.json.
+    mergedConfig.__userFiltersProvided = userProvidedFilters;
   } catch (error) {
     console.warn("Using default configuration due to error loading config:", error);
   }
