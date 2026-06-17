@@ -1,8 +1,8 @@
 {
   "site": {
     "pageTitle": "Interactive Literature Database",
-    "pageSubtitle": "Journal of the Learning Sciences",
-    "heroHeading": "Database Title",
+    "pageSubtitle": "PAR and information literacy",
+    "heroHeading": "To read list",
     "submitButtonText": "Please dont submit articles",
     "submitButtonLink": ""
   },
@@ -15,9 +15,6 @@
     },
     "filter3": {
       "label": "Subject"
-    },
-    "filter4": {
-      "label": ""
     }
     
   },
