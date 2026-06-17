@@ -14,10 +14,10 @@
       "label": "Population"
     },
     "filter3": {
-      "label": "Theory"
+      "label": "Subject"
     },
     "filter4": {
-      "label": "Subject"
+      "label": ""
     }
     
   },
@@ -36,7 +36,7 @@
     "favicon": "assets/uploads/signpost-2.svg"
   },
   "colors": {
-    "primaryAccent": "#8F250C",
-    "secondaryAccent": "#EF8A17"
+    "primaryAccent": "#09C8AE",
+    "secondaryAccent": "#D2BBFC"
   }
 }
